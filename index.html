@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssey | Premium Travel Journal</title>
+    <style>
+        /* f. Colored background - Using a professional Off-White/Grey */
+        :root {
+            --primary-dark: #1a1a1a;
+            
+            --bg-light: #f9f9f9;
+            --text-gray: #4a4a4a;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--primary-dark);
+            font-family: 'Georgia', serif; /* Elegant, professional serif font */
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 8px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-style: italic;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+        }
+
+        nav {
+    /* f. Colored background - now using transparent RGBA */
+    background: rgba(255, 255, 255, 0.1); /* Very light transparency */
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    /* The Professional "Glass" Secret */
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px); /* Support for Safari */
+    
+    /* Subtle border to define the edge */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+    transition: all 0.3s ease;
+}
+
+/* Update Nav links for better visibility on transparent background */
+nav a {
+    color: #ffffff; /* White text looks better over video */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Shadow ensures readability */
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Beautiful Section Styling */
+        section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 50px;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 25px;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* b. Image styling - Modern & Large */
+        .hero-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            filter: grayscale(20%);
+        }
+
+        /* e. List - Styled professionally */
+        .styled-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .styled-list li {
+            padding: 15px 0;
+            border-bottom: 1px dotted #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .styled-list li::before {
+            content: "✦";
+            color: var(--accent-gold);
+            margin-right: 15px;
+        }
+
+        /* d. Tables - Minimalist & Professional */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        th {
+            text-align: left;
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-bottom: 2px solid var(--primary-dark);
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropcap {
+            float: left;
+            font-size: 4rem;
+            line-height: 1;
+            padding-right: 10px;
+            color: var(--accent-gold);
+        }
+        
+    </style>
+</head>
+<body>
+<div class="video-background">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="c:\Users\yongy\Downloads\From KlickPin CF Pin su wallpaper.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay"></div>
+</div>
+
+<style>
+    /* CSS for Video Background */
+    .video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        z-index: -1; /* Keeps it behind all content */
+        overflow: hidden;
+    }
+
+    #bg-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures video covers screen without stretching */
+        transform: translate(-50%, -50%);
+    }
+
+    /* Important: Dark overlay so white text stands out */
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* 40% black transparency */
+    }
+
+    /* Adjusting existing styles for the video background */
+    body {
+        background-color: transparent; /* Remove old solid background */
+    }
+
+    header {
+        background-color: rgba(26, 26, 26, 0.8) !important; /* Semi-transparent header */
+    }
+
+    section {
+        background: rgba(255, 255, 255, 0.9); /* Slight transparency for a glass look */
+        backdrop-filter: blur(5px); /* Professional 'Glassmorphism' effect */
+    }
+</style>
+    <header>
+        <h1>ODYSSEY</h1>
+        <p>A Curated Journal of Global Exploration: Stories, Cultures & Experiences</p>
+    </header>
+
+    <nav>
+        <a href="#philosophy">Our Philosophy</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#logistics">Logistics</a>
+        <a href="https://www.travelandleisure.com" target="_blank">Latest News</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="philosophy">
+            <h2>The Art of Wandering</h2>
+            <p><span class="dropcap">T</span>ravel is more than just the movement from one geographical coordinate to another; it is an expansion of the soul. In a world that is increasingly digital and disconnected from the physical earth, the act of stepping into unknown territory remains one of the last true frontiers of human growth. Our philosophy is rooted in "Slow Travel"—the idea that one should immerse themselves in the local culture, breathe the mountain air, and speak with the artisans who keep ancient traditions alive.</p>
+            
+            <p>Whether you are navigating the mist-covered peaks of the Himalayas or finding silence in a Japanese Zen garden, every journey tells a story. This project explores the intersection of luxury, adventure, and cultural preservation.</p>
+        </section>
+
+        <img src="c:\Users\yongy\OneDrive\Desktop\Documents\html program\photo.png" alt="people and travel" class="hero-image">
+
+        <section id="destinations">
+            <h2>Seasonal Curations</h2>
+            <p>For the discerning traveler, we have curated a list of locations that offer a perfect balance of tranquility and inspiration:</p>
+            
+            <ul class="styled-list">
+                <li><strong>The Nordic Escape:</strong> Experience the Aurora Borealis from the comfort of a glass igloo in Finnish Lapland.</li>
+                <li><strong>The Heritage Route:</strong> Walk through the living history of the Silk Road, exploring the intricate tilework of Samarkand.</li>
+                <li><strong>The Coastal Retreat:</strong> Discover the hidden coves of the Amalfi Coast, where the lemons grow large and the sea is forever blue.</li>
+                <li><strong>The Highland Sanctuary:</strong> Find peace in the emerald valleys of Bhutan, the only carbon-negative country in the world.</li>
+            </ul>
+        </section>
+
+        <section id="logistics">
+            <h2>Expedition Planning</h2>
+            <p>A professional traveler knows that preparation is the key to spontaneity. Below is a comparison of regional travel logistics for the upcoming season:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Region</th>
+                        <th>Recommended Duration</th>
+                        <th>Cultural Etiquette</th>
+                        <th>Best Season</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Southeast Asia</td>
+                        <td>14 - 21 Days</td>
+                        <td>Modest dress in temples</td>
+                        <td>Nov — Feb</td>
+                    </tr>
+                    <tr>
+                        <td>Western Europe</td>
+                        <td>10 - 14 Days</td>
+                        <td>Table manners are key</td>
+                        <td>May — Sept</td>
+                    </tr>
+                    <tr>
+                        <td>South America</td>
+                        <td>15 - 25 Days</td>
+                        <td>Learning basic Spanish</td>
+                        <td>June — Aug</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <footer style="text-align: center; padding: 50px; background: #1a1a1a; color: #888;">
+        <p style="letter-spacing: 2px;">&copy; YONGYO NP KONYAK | DCA 2026</p>
+    </footer>
+
+</body>
+</html>
